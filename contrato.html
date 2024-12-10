@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Prestação de Serviços</title>
+    <link rel="stylesheet" href="contrato.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contrato de Prestação de Serviços - Academia</h1>
+
+        <div class="contract">
+            <h2>Cláusulas e Termos</h2>
+            <p><strong>Cláusula 1º - Objeto do Contrato:</strong> Este contrato tem por objeto a prestação de serviços de atividades físicas e recreativas no grupo forte academia.</p>
+            <p><strong>Cláusula 2º - Obrigações do Aluno:</strong> O aluno se compromete a frequentar regularmente a academia e respeitar as normas internas de funcionamento, incluindo o uso adequado dos equipamentos.</p>
+            <p><strong>Cláusula 3º - Valor e Pagamento:</strong> O valor mensal da mensalidade será de R$ 150,00, a ser pago até o dia 5 de cada mês.</p>
+            <p><strong>Cláusula 4º - Cancelamento:</strong> O aluno poderá solicitar o cancelamento do contrato com aviso prévio de 30 dias.</p>
+            <p><strong>Cláusula 5º - Termos Adicionais:</strong> O aluno concorda com a utilização de seus dados para fins administrativos da academia, conforme a Política de Privacidade.</p>
+
+            <h3>Declaração de Concordância</h3>
+            <p>Ao assinar este contrato, o aluno declara que leu, compreendeu e concorda com todos os termos e condições estabelecidos acima.</p>
+        </div>
+
+        <div class="signature-section">
+            <h2>Assine o Contrato</h2>
+            <textarea id="signature" placeholder="Digite seu nome para assinar..."></textarea>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="agreement" />
+                <label for="agreement">Eu concordo com os termos e condições do contrato.</label>
+            </div>
+
+            <button onclick="assinarContrato()">Assinar Contrato</button>
+        </div>
+
+        <div id="download-section" class="download-section" style="display:none;">
+            <h2>Contrato Assinado</h2>
+            <p id="signed-contract-text"></p>
+            <button onclick="baixarContrato()">Baixar Contrato Assinado</button>
+            <a href="usuario-aluno.html">
+            <button>voltar</button></a>
+        </div>
+    </div>
+  
+    <script src="contrato.js"></script>
+</body>
+</html>

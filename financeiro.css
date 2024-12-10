@@ -1,0 +1,282 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-image: url(fundooriginal.jpg);
+       background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 900px;
+    margin-left: 500px;
+    margin-top: 180px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cpf-section {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: 2px solid #0056b3;
+}
+
+#erro-cpf, #cpf-nao-encontrado {
+    color: red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.forma-pagamento-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.info-pagamento {
+    margin-top: 30px;
+    display: none;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f0f0f0;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .table-card {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .table-card .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+
+    .table-card .row:nth-child(even) {
+        background-color: #f0f0f0;
+    }
+
+    .table-card .row .col {
+        width: 23%;
+        font-size: 14px;
+    }
+
+    .table-card .row .col.description {
+        font-weight: bold;
+    }
+}
+
+/* Estilos para o modal do boleto */
+.boleto-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.boleto-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}
+
+.boleto-modal button {
+    background-color: #ff5c5c;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boleto-modal button:hover, .boleto-modal button:focus {
+    background-color: #e60000;
+}
+
+.boleto-modal button:focus {
+    outline: 2px solid #e60000;
+}
+
+#boleto-codigo-barra-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+#boleto-codigo-barra {
+    width: 100%;
+    height: 60px;
+}
+
+@media (max-width: 768px) {
+    .boleto-modal-content {
+        width: 90%;
+    }
+}
+/* Estilos para o botão de pagamento e mensagem de aguardando */
+#btn-pagar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#btn-pagar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#mensagem-aguardando {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilos para a chave PIX */
+#chave-pix-container {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#chave-pix-container p {
+    background-color: #e9f7ff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+}
+
+.finaceiro{
+    position: fixed;
+}

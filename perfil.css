@@ -1,0 +1,254 @@
+/* Resetando estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Container principal */
+.container {
+    width: 50%;
+    margin: 0 auto;
+    color: #3498db;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #3498db;
+}
+
+/* Perfil */
+.perfil {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-info {
+    flex: 1;
+    text-align: center;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.progresso {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.grafico {
+    margin-top: 20px;
+}
+
+.barra-progresso {
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.barra-progresso div {
+    height: 100%;
+    background-color: #3498db;
+}
+
+/* Estilo para as seções de Medidas, Água, Treinos, etc. */
+section {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+/* Cartões para Histórico de Treinos */
+#treinos-historico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.treino-card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.treino-card h4 {
+    font-size: 1.2rem;
+    color: #3498db;
+}
+
+.treino-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo da Configuração (Alterar Objetivo) */
+.configuracao-card h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.configuracao-card input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+/* Estilo para as novas seções */
+.agua, .alimentacao, .notificacoes, .suplementos, .lesao, .relatorio, .historico, .videos {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.agua h3, .alimentacao h3, .notificacoes h3, .suplementos h3, .lesao h3, .relatorio h3, .historico h3, .videos h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.agua form, .alimentacao form, .notificacoes form, .suplementos form, .lesao form {
+    display: flex;
+    flex-direction: column;
+}
+
+.agua input, .alimentacao input, .notificacoes input, .suplementos input, .lesao input, .lesao textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Botões */
+.agua button, .alimentacao button, .notificacoes button, .suplementos button, .lesao button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.agua button:hover, .alimentacao button:hover, .notificacoes button:hover, .suplementos button:hover, .lesao button:hover {
+    background-color: #21264d;
+}
+
+/* Histórico e Relatório */
+#historico-resultado, #relatorio-resultado {
+    margin-top: 20px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Vídeos */
+.videos button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.videos button:hover {
+    background-color: #3498db;
+}
+
+/* Estilo para a área de lesão/sintomas */
+.lesao textarea {
+    width: 100%; /* Largura total do container */
+    height: 200px; /* Altura ajustada para tornar a caixa mais alta */
+    padding: 10px;
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Permite que o usuário redimensione a altura */
+}
+
+/* Estilo do botão dentro da seção de lesão */
+.lesao button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.lesao button:hover {
+    background-color:#3498db;
+}
+
+.contrato button{
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
